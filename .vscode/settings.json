@@ -1,0 +1,12 @@
+{
+  "mochaExplorer.mochaPath": "./node_modules/mocha",
+  "mochaExplorer.files": "tests/**/*.ts",
+  "mochaExplorer.require": ["ts-node/register"],
+  "mochaExplorer.cwd": "./", // ワークスペースフォルダで実行
+  "mochaExplorer.env": {
+    "NODE_PATH": "./" // ワークスペース内のファイルで絶対参照を使用するために設定
+  },
+  // コードレンズを有効にする
+  "editor.codeLens": true,
+  "testExplorer.codeLens": true
+}
