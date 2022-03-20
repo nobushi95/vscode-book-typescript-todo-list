@@ -1,0 +1,26 @@
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // tscでjsにトランスパイスする場合（tasks.jsonでtscビルドが必要）
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Server",
+      //   "stopOnEntry": true,
+      "preLaunchTask": "tsc build",
+      "program": "${workspaceFolder}/out/src/server/api.js",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      // ts-nodeを使用する場合
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Server(ts-node)",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    }
+  ]
+}
