@@ -7,6 +7,22 @@
       "problemMatcher": ["$tsc"],
       "group": "build",
       "label": "tsc build"
+    },
+    {
+      "label": "webpack build",
+      "command": ["${workspaceFolder}/node_modules/.bin/webpack"],
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "webpack build (watch)",
+      "command": ["${workspaceFolder}/node_modules/.bin/webpack -w"],
+      "type": "shell",
+      "problemMatcher": ["$tsc"]
     }
   ]
 }
